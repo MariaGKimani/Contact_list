@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    >
+
 
     <ImageView
         android:id="@+id/Ivavatar"
@@ -12,6 +14,7 @@
         android:layout_marginStart="2dp"
         android:layout_marginTop="56dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="180dp"
-        tools:text="Name"
+        tools:text="Mariagoretti"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/Ivavatar"
@@ -48,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="95dp"
-        tools:text="Phone Number"
+        tools:text=")757612568"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/IvCall"
         app:layout_constraintTop_toTopOf="@+id/IvCall" />
@@ -79,5 +82,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/Ivemail"
         app:layout_constraintTop_toBottomOf="@+id/tvPhoneNumber"
-        tools:text="Email" />
+        tools:text="mg@gmail.com" />
 </androidx.constraintlayout.widget.ConstraintLayout>

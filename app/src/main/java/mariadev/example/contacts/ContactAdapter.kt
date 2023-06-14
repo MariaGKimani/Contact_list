@@ -3,6 +3,8 @@ package mariadev.example.contacts
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
+import jp.wasabeef.picasso.transformations.CropCircleTransformation
 import mariadev.example.contacts.databinding.ContactListBinding
 
 class ContactAdapter(var Contactdata: List<ContactList>):RecyclerView.Adapter<ContactViewHolder>() {
@@ -18,6 +20,13 @@ class ContactAdapter(var Contactdata: List<ContactList>):RecyclerView.Adapter<Co
             tvname.text = contactDetails.name
             tvEmail.text =contactDetails.email
             tvPhoneNumber.text= contactDetails.phoneNumber
+            Picasso
+                .get()
+                .load(contactDetails.ImagePlaceholder)
+                .resize(80,80) //to resize image
+                .centerCrop() // to prevent distorted
+                .transform(CropCircleTransformation())  // border radius
+                .into(holder.binding.Ivavatar)
 
         }
     }
