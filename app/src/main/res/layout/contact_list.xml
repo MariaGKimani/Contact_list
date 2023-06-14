@@ -72,11 +72,12 @@
         android:id="@+id/tvEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="117dp"
-        tools:text="Email"
         app:layout_constraintBottom_toBottomOf="@+id/Ivemail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/Ivemail"
-        app:layout_constraintTop_toBottomOf="@+id/tvPhoneNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPhoneNumber"
+        tools:text="Email" />
 </androidx.constraintlayout.widget.ConstraintLayout>
