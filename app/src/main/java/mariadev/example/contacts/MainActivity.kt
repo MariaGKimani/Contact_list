@@ -1,9 +1,11 @@
 package mariadev.example.contacts
 
+import android.content.Intent
 import android.os.Binder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import mariadev.example.contacts.databinding.ActivityAddcontactsBinding
 import mariadev.example.contacts.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -12,11 +14,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+//        binding.Fabadd.setOnClickListener {
+//            openActivityAddcontactsBinding()
+//        }
     }
 
     override fun onResume() {
         super.onResume()
         displayContacts()
+
+        binding.Fabadd.setOnClickListener {
+            val intent = Intent(this,addcontacts::class.java)
+            startActivity(intent)
+        }
     }
 
     fun displayContacts(){
@@ -35,5 +45,9 @@ class MainActivity : AppCompatActivity() {
         var contacts = ContactAdapter(displayallcontact)
         binding.rvContacts.adapter = contacts
     }
+//    fun openActivityAddcontactsBinding(){
+//        val intent = Intent(this,ActivityAddcontactsBinding::class.java)
+//        startActivity(intent)
+//    }
 
 }
